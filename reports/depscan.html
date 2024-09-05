@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {font-weight: bold}
+.r2 {font-style: italic}
+.r3 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+.r4 {color: #7c8082; text-decoration-color: #7c8082; font-style: italic}
+.r5 {color: #5a7c90; text-decoration-color: #5a7c90}
+.r7 {color: #ff753d; text-decoration-color: #ff753d; font-weight: bold}
+.r8 {color: #00875f; text-decoration-color: #00875f}
+.r9 {color: #00ff00; text-decoration-color: #00ff00}
+.r10 {font-weight: bold; text-decoration: underline}
+.r11 {font-weight: bold; font-style: italic}
+.r12 {color: #5f5f5f; text-decoration-color: #5f5f5f}
+.r13 {color: #7f7f7f; text-decoration-color: #7f7f7f; font-style: italic}
+.r14 {color: #acbdc7; text-decoration-color: #acbdc7; font-style: italic}
+.r15 {color: #808000; text-decoration-color: #808000; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">╭─────────────────── Risk Audit Capability ───────────────────╮
+│ Depscan supports OSS Risk audit for this project.           │
+│ To enable set the environment variable <span class="r1">ENABLE_OSS_RISK=true</span> │
+╰─────────────────────────────────────────────────────────────╯
+
+<span class="r2">                          Dependency Scan Results (JS)                          </span>
+╔══════════════════════╤══════════════════════╤═════════════╤══════════╤═══════╗
+║<span class="r3"> Dependency Tree      </span>│<span class="r3"> Insights             </span>│<span class="r3"> Fix Version </span>│<span class="r3"> Severity </span>│<span class="r3"> Score </span>║
+╟──────────────────────┼──────────────────────┼─────────────┼──────────┼───────╢
+║ <span class="r4">app@1.0.0           </span> │ 🎯 Used in <span class="r5">3</span>         │ 0.6.2       │ MEDIUM   │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.3.19 ⬅ </span> │ locations            │             │          │       ║
+║ <span class="r6">    </span><span class="r7">NPM-1088022     </span> │                      │             │          │       ║
+╟──────────────────────┼──────────────────────┼─────────────┼──────────┼───────╢
+║ <span class="r4">app@1.0.0           </span> │ 🎯 Used in <span class="r5">3</span>         │ 4.0.10      │ HIGH     │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.3.19 ⬅ </span> │ locations            │             │          │       ║
+║ <span class="r6">    </span><span class="r7">CVE-2022-21680  </span> │                      │             │          │       ║
+╟──────────────────────┼──────────────────────┼─────────────┼──────────┼───────╢
+║ <span class="r4">app@1.0.0           </span> │ 🎯 Used in <span class="r5">3</span>         │ 4.0.10      │ HIGH     │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.3.19 ⬅ </span> │ locations            │             │          │       ║
+║ <span class="r6">    </span><span class="r7">CVE-2022-21681  </span> │                      │             │          │       ║
+╟──────────────────────┼──────────────────────┼─────────────┼──────────┼───────╢
+║ <span class="r4">app@1.0.0           </span> │ <span class="r8">📓 Indirect </span>         │ 4.0.1       │ HIGH     │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">trim-newlines@4…</span> │ <span class="r8">dependency</span>           │             │          │       ║
+║ <span class="r6">    </span><span class="r7">⬅ CVE-2021-33623</span> │                      │             │          │       ║
+╟──────────────────────┼──────────────────────┼─────────────┼──────────┼───────╢
+║ <span class="r4">app@1.0.0           </span> │ 🎯 Used in <span class="r5">2</span>         │             │ HIGH     │   8.1 ║
+║ <span class="r6">└── </span><span class="r7">ip@1.1.9 ⬅      </span> │ locations            │             │          │       ║
+║ <span class="r6">    </span><span class="r7">CVE-2024-29415  </span> │                      │             │          │       ║
+╟──────────────────────┼──────────────────────┼─────────────┼──────────┼───────╢
+║ <span class="r4">app@1.0.0           </span> │ 🎯 Used in <span class="r5">3</span>         │ 0.6.2       │ MEDIUM   │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.3.19 ⬅ </span> │ locations            │             │          │       ║
+║ <span class="r6">    </span><span class="r7">GHSA-xf5p-87ch-…</span> │                      │             │          │       ║
+╚══════════════════════╧══════════════════════╧═════════════╧══════════╧═══════╝
+╭─────────────────────────────── Recommendation ───────────────────────────────╮
+│ 👉 <span class="r5">3</span> out of 6 vulnerabilities requires your attention.                       │
+│ ✅ You can update <span class="r9">all</span> the packages using the mentioned fix version to        │
+│ remediate.                                                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+                               <span class="r10">Proactive Measures</span>                               
+
+Below are the top reachable packages identified by depscan. Setup alerts and    
+notifications to actively monitor these packages for new vulnerabilities and    
+exploits.                                                                       
+
+<span class="r2">                             Top Reachable Packages                             </span>
+╔══════════════════════════════════════════════╤═══════════════════════════════╗
+║<span class="r3"> Package                                      </span>│<span class="r3"> Reachable Flows               </span>║
+╟──────────────────────────────────────────────┼───────────────────────────────╢
+║ pkg:npm/express@4.18.2                       │ 343                           ║
+╟──────────────────────────────────────────────┼───────────────────────────────╢
+║ pkg:npm/marked@0.3.5                         │ 128                           ║
+╟──────────────────────────────────────────────┼───────────────────────────────╢
+║ pkg:npm/ip@1.1.8                             │ 89                            ║
+╚══════════════════════════════════════════════╧═══════════════════════════════╝
+
+
+                                <span class="r10">Reachable Flows</span>                                 
+
+Below are some reachable flows identified by depscan. Use the provided tips to  
+improve the securability of your application.                                   
+
+<span class="r11">#1</span><span class="r2"> Flow starts from a module import                                             </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#6    </span>require(&#x27;express&#x27;)                                             ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#7    </span>require(&#x27;path&#x27;)                                            ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>path.join(__dirname, &#x27;static&#x27;)                            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#126    </span>app.post(&#x27;/markdown&#x27;, function (req, res) {              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/marked@0.3.5</span>                       ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#158    </span>app.get(&#x27;/checkip&#x27;, function(req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#159    </span>res.send                                                 ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                              pkg:npm/marked@0.3.5                              </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+<span class="r13">                                pkg:npm/ip@1.1.8                                </span>
+
+<span class="r11">#2</span><span class="r2"> express.static(path.join(__dirname, &#x27;static&#x27;)) can be used to reach this     </span>
+<span class="r2">package.                                                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#17    </span>express.static(path.join(__dirname, &#x27;static&#x27;))                ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#3</span><span class="r2"> express.json({ limit: &#x27;10mb&#x27; }) can be used to reach this package.           </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#16    </span>express.json({ limit: &#x27;10mb&#x27; })                               ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#4</span><span class="r2"> app.post(&#x27;/trimnewlines&#x27;, function (req, res) { can be used to reach 3       </span>
+<span class="r2">packages.                                                                       </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {               ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                                 ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#126    </span>app.post(&#x27;/markdown&#x27;, function (req, res) {              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/marked@0.3.5</span>                       ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#158    </span>app.get(&#x27;/checkip&#x27;, function(req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#159    </span>res.send(`                                               ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                              pkg:npm/marked@0.3.5                              </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+<span class="r13">                                pkg:npm/ip@1.1.8                                </span>
+
+<span class="r11">#5</span><span class="r2"> app.post(&#x27;/trimnewlines&#x27;, function (req, res) { can be used to reach this    </span>
+<span class="r2">package.                                                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {               ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                                 ║
+║                                                                              ║
+║ <span class="r6">└── </span><span class="r12">index.js#92    </span>res.send                                                  ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#6</span><span class="r2"> express.static(path.join(__dirname, &#x27;static&#x27;)) can be used to reach this     </span>
+<span class="r2">package.                                                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#17    </span>express.static(path.join(__dirname, &#x27;static&#x27;))                ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#35    </span>res.sendFile(__dirname + &#x27;/templates/chat-ui.html&#x27;)       ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#7</span><span class="r2"> express.static(path.join(__dirname, &#x27;static&#x27;)) can be used to reach 3        </span>
+<span class="r2">packages.                                                                       </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#17    </span>express.static(path.join(__dirname, &#x27;static&#x27;))                ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#126    </span>app.post(&#x27;/markdown&#x27;, function (req, res) {              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/marked@0.3.5</span>                       ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#158    </span>app.get(&#x27;/checkip&#x27;, function(req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#159    </span>res.send                                                 ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                              pkg:npm/marked@0.3.5                              </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+<span class="r13">                                pkg:npm/ip@1.1.8                                </span>
+
+<span class="r11">#8</span><span class="r2"> express.static(path.join(__dirname, &#x27;static&#x27;)) can be used to reach this     </span>
+<span class="r2">package.                                                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#17    </span>express.static(path.join(__dirname, &#x27;static&#x27;))                ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#39    </span>res.send(`                                                ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#9</span><span class="r2"> Flow starts from a callback function                                         </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,        ║
+║ &#x27;static&#x27;)))                                                                  ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#10</span><span class="r2"> const express = require(&#x27;express&#x27;) can be used to reach this package.       </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#6    </span>const express = require(&#x27;express&#x27;)                             ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#15    </span>express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true })     ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#29    </span>res.sendFile                                              ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#11</span><span class="r2"> const express = require(&#x27;express&#x27;) can be used to reach 3 packages.         </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#6    </span>const express = require(&#x27;express&#x27;)                             ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#15    </span>express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true })     ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#126    </span>app.post(&#x27;/markdown&#x27;, function (req, res) {              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/marked@0.3.5</span>                       ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#158    </span>app.get(&#x27;/checkip&#x27;, function(req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#262    </span>app.post(&#x27;/checkip&#x27;, function (req, res) {               ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#288    </span>res.send(responseMessage)                                ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                              pkg:npm/marked@0.3.5                              </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+<span class="r13">                                pkg:npm/ip@1.1.8                                </span>
+
+<span class="r11">#12</span><span class="r2"> Flow starts from a module import                                            </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#6    </span>require(&#x27;express&#x27;)                                             ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#7    </span>require(&#x27;path&#x27;)                                            ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>path.join(__dirname, &#x27;static&#x27;)                            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#13</span><span class="r2"> express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true }) can be used to reach 3</span>
+<span class="r2">packages.                                                                       </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#15    </span>express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true })         ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#126    </span>app.post(&#x27;/markdown&#x27;, function (req, res) {              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/marked@0.3.5</span>                       ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#158    </span>app.get(&#x27;/checkip&#x27;, function(req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#262    </span>app.post(&#x27;/checkip&#x27;, function (req, res) {               ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#288    </span>res.send                                                 ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                              pkg:npm/marked@0.3.5                              </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+<span class="r13">                                pkg:npm/ip@1.1.8                                </span>
+
+<span class="r11">#14</span><span class="r2"> Flow starts from a callback function                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#15    </span>app.use(express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true    ║
+║ }))                                                                          ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#126    </span>app.post(&#x27;/markdown&#x27;, function (req, res) {              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/marked@0.3.5</span>                       ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#158    </span>app.get(&#x27;/checkip&#x27;, function(req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#262    </span>app.post(&#x27;/checkip&#x27;, function (req, res) {               ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, pkg:npm/ip@1.1.8</span>                           ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#288    </span>res.send                                                 ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                              pkg:npm/marked@0.3.5                              </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+<span class="r13">                                pkg:npm/ip@1.1.8                                </span>
+
+<span class="r11">#15</span><span class="r2"> Flow starts from a callback function                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#15    </span>app.use(express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true    ║
+║ }))                                                                          ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#35    </span>res.sendFile(__dirname + &#x27;/templates/chat-ui.html&#x27;)       ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#16</span><span class="r2"> express.static(path.join(__dirname, &#x27;static&#x27;)) can be used to reach this    </span>
+<span class="r2">package.                                                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#17    </span>express.static(path.join(__dirname, &#x27;static&#x27;))                ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#17</span><span class="r2"> Flow starts from a callback function                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#15    </span>app.use(express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true    ║
+║ }))                                                                          ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#18</span><span class="r2"> Flow starts from a callback function                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#15    </span>app.use(express.urlencoded({ limit: &#x27;10mb&#x27;, extended: true    ║
+║ }))                                                                          ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#19</span><span class="r2"> Flow starts from a callback function                                        </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                      ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#92    </span>res.send(`                                                ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+<span class="r11">#20</span><span class="r2"> express() can be used to reach this package.                                </span>
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ <span class="r12">index.js#14    </span>express()                                                     ║
+║ <span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                      ║
+║                                                                              ║
+║ <span class="r6">├── </span><span class="r12">index.js#15    </span>app.use(express.urlencoded({ limit: &#x27;10mb&#x27;, extended:     ║
+║ <span class="r6">│   </span>true }))                                                                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#16    </span>app.use(express.json({ limit: &#x27;10mb&#x27; }))                  ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#17    </span>app.use(&#x27;/static&#x27;, express.static(path.join(__dirname,    ║
+║ <span class="r6">│   </span>&#x27;static&#x27;)))                                                              ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2, framework</span>                                  ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#18    </span>app.use(bodyParser.urlencoded({ extended: true }))        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#28    </span>app.get(&#x27;/&#x27;, function (req, res) {                        ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#31    </span>app.get(&#x27;/markdown&#x27;, function (req, res) {                ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#34    </span>app.get(&#x27;/chat-ui&#x27;, function (req, res) {                 ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#38    </span>app.get(&#x27;/trimnewlines&#x27;, function (req, res) {            ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">├── </span><span class="r12">index.js#74    </span>app.post(&#x27;/trimnewlines&#x27;, function (req, res) {           ║
+║ <span class="r6">│   </span><span class="r1">Tags:</span> <span class="r2">pkg:npm/express@4.18.2</span>                                             ║
+║ <span class="r6">│   </span>                                                                         ║
+║ <span class="r6">└── </span><span class="r12">index.js#92    </span>res.send                                                  ║
+║ <span class="r6">    </span><span class="r1">Tags:</span> <span class="r2">framework-output</span>                                                   ║
+║ <span class="r6">    </span>                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+<span class="r13">                              </span><span class="r14">Reachable Packages:</span><span class="r13">                               </span>
+<span class="r13">                             pkg:npm/express@4.18.2                             </span>
+
+                               <span class="r10">Secure Design Tips</span>                               
+
+<span class="r15"> • </span>Consider implementing a common validation/sanitization library to reduce the 
+<span class="r15">   </span>exploitability risk.                                                         
+</code></pre>
+</body>
+</html>
